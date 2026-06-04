@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import gulp from 'gulp';
 import gulpAutoPrefixer from 'gulp-autoprefixer';
-import gulpEslint from 'gulp-eslint';
+import gulpEslint from 'gulp-eslint-new';
 import gulpHeader from 'gulp-header';
 import gulpRename from 'gulp-rename';
 import archiver from 'archiver';
@@ -107,8 +107,10 @@ gulp.task('copy:misc', () =>
         // (other tasks will handle the copying of these files)
         `!${dirs.src}/css/main.css`,
         `!${dirs.src}/index.html`,
+        `!**/.DS_Store`,
       ],
       {
+        encoding: false,
         // Include hidden files by default
         dot: true,
       },

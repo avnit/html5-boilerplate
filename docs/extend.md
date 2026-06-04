@@ -16,7 +16,7 @@ everything fits with everyone's needs.
 - [Social Networks](#social-networks)
 - [URLs](#urls)
 - [Web Apps](#web-apps)
-- [security.txt](#security.txt)
+- [security.txt](#securitytxt)
 
 ## Server Configuration
 
@@ -149,6 +149,13 @@ content="telephone=no">`](https://developer.apple.com/library/archive/documentat
   page) by [implementing X-Robots-tag
   headers](https://github.com/h5bp/html5-boilerplate/issues/804).
 
+- Apply JavaScript-dependent CSS styles using [the `scripting` media
+  feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/scripting).
+  Use `@media (scripting: none) { ... }` to target browsers with JavaScript
+  disabled, or `@media (scripting: enabled) { ... }` to target browsers with
+  JavaScript enabled. Using this technique also helps [avoid the
+  FOUC](https://www.paulirish.com/2009/avoiding-the-fouc-v3/).
+
 ## News Feeds
 
 ### RSS
@@ -211,6 +218,8 @@ Facebook).
 <meta property="og:type" content="website">
 <meta property="og:title" content="">
 <meta property="og:image" content="https://www.example.com/path/to/image.jpg">
+<!-- Empty for decorative images. -->
+<meta property="og:image:alt" content="Example image depicting...">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="">
 <meta property="article:author" content="">
@@ -249,7 +258,7 @@ Tool](https://developers.google.com/search/docs/appearance/structured-data). Als
 note that this markup requires to add attributes to your top `html` tag.
 
 ```html
-<html class="no-js" lang="" itemscope itemtype="https://schema.org/Article">
+<html lang="" itemscope itemtype="https://schema.org/Article">
   <head>
 
     <link rel="author" href="">
@@ -339,9 +348,7 @@ colors.
 
 The `content` attribute extension can take any valid CSS color.
 
-Currently, the `theme-color` meta extension is supported by [Chrome 39+ for
-Android
-Lollipop](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android).
+For browser support details, refer to [Can I Use](https://caniuse.com/meta-theme-color).
 
 ### security.txt
 

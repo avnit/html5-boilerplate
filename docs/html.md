@@ -11,13 +11,6 @@ By default, HTML5 Boilerplate provides two `html` pages:
 
 ## `index.html`
 
-### The `no-js` Class
-
-The `no-js` class is provided in order to allow you to more easily and
-explicitly add custom styles based on whether JavaScript is disabled (`.no-js`)
-or enabled (`.js`). Using this technique also helps [avoid the
-FOUC](https://www.paulirish.com/2009/avoiding-the-fouc-v3/).
-
 ### Language Attribute
 
 Please consider specifying the language of your content by adding a
@@ -25,7 +18,7 @@ Please consider specifying the language of your content by adding a
 to the `lang` attribute in the `<html>` as in this example:
 
 ```html
-<html class="no-js" lang="en">
+<html lang="en">
 ```
 
 ### The order of the `<title>` and `<meta>` tags
@@ -80,6 +73,7 @@ website, article).
 <meta property="og:type" content="">
 <meta property="og:url" content="">
 <meta property="og:image" content="">
+<meta property="og:image:alt" content="">
 ```
 
 In addition to these four attributes there are many more attributes you can use
@@ -96,6 +90,8 @@ describe the site in more detail.
 <meta property="og:type" content="website">
 <meta property="og:description" content="The web’s most popular front-end template which helps you build fast, robust, and adaptable web apps or sites.">
 <meta property="og:image" content="https://html5boilerplate.com/icon.png">
+<!-- Empty for decorative images. -->
+<meta property="og:image:alt" content="">
 ```
 
 ### Web App Manifest
