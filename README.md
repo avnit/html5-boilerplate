@@ -119,3 +119,22 @@ involved, please take a moment to review the [guidelines](.github/CONTRIBUTING.m
 ## License
 
 The code is available under the [MIT license](LICENSE.txt).
+
+<!-- ARCH-DIAGRAM:START -->
+
+## Architecture
+
+> Auto-generated architecture diagram. See [`docs/context-map.md`](docs/context-map.md) for the full context map (core application, containers/cloud, and database connections).
+
+```mermaid
+flowchart TD
+  User([User / Client])
+  UI["Frontend<br/>Vue"]
+  App["html5-boilerplate<br/>Express / Node"]
+  Img["Container image<br/>(Docker)"]
+  User --> UI
+  UI --> App
+  App -.deploy.-> Img
+```
+
+<!-- ARCH-DIAGRAM:END -->
